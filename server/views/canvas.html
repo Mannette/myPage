@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/css/canvas.css">
+{% endblock %}
+
+
+{% block content %}
+  <!-- <div class="tab-container container">
+    <ul class="nav nav-tabs" role="tablist">
+      <li>
+        <a href="homepage">Home</a>
+      </li>
+      <li class="active">
+        <a href="visuals">Cool Visuals</a>
+      </li>
+    </ul>
+  </div> -->
+
+  <div id="canvas-container">
+  <canvas id="canvas" width="1000" height="1000"></canvas>
+    <p>
+      <button id="dots" class="btn">Fibonacci Dots!</button>
+      <button id="torus" class="btn">Torus</button>
+      <button id="fibSpiral" class="btn">Spiral</button>
+      <button id="sunflower" class="btn">Sunflower</button>
+      <br>
+      <button id="clear" class="btn">Clear Canvas</button>
+    </p>
+  </div>
+
+  <script type="text/javascript" src="/js/canvas.js"></script>
+
+{% endblock %}

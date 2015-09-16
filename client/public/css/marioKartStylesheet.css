@@ -1,0 +1,125 @@
+/* Every position computer/player alike */
+.position {
+  width: 125px;
+  height: 116px;
+  margin: 1% 0 1% 0;
+  background-color: white;
+  align-items: flex-end;
+  display: inline-flex;
+}
+
+ /*Setting background image*/
+body {
+background-image: url("../images/Super-Mario-Kart.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+/* Additional styling for area around positions */
+section {
+  opacity: 0.8;
+}
+
+/* ^^^^^^^^^ */
+.allPositions {
+  background-color: black;
+  flex-direction: row;
+}
+
+/* Styling to character buttons */
+.characters {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 2em;
+  background-image: url("../images/simpleGradient.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 225px;
+  height: 500px;
+  color: white;
+}
+/* Styling for questions area */
+.question-box {
+  position: relative;
+  top: 50px;
+  right: 10px;
+  margin-bottom: 2%;
+  background-color: black;
+  float: right;
+  width: 800px;
+  height: 400px;
+  opacity: 0.8;
+  box-shadow: 50px 50px 113px rgb(0, 0, 0);
+  color: yellow;
+}
+/* Make images same size as div when html is set */
+.image {
+  height: inherit;
+  width: inherit;
+}
+
+/* Make starting position different color */
+.playerStart, .computerStart {
+  background-color: blue;
+  color: white;
+}
+
+/* Make fish position different color */
+.playerFinish, .computerFinish {
+  background-color: yellow;
+}
+
+/* Styling for advance button */
+.advanceButton {
+  position: absolute;
+  top: 88%;
+  height: 50px;
+  width: 100%;
+  opacity: 1;
+}
+
+/* Styling for replay button */
+.replay {
+  height: 100%;
+  width: 100%;
+  font-size: 4em;
+}
+
+/* Styling for rules/instructions block */
+.titleRules {
+  background-color: red;
+  margin: auto;
+  margin-top: 15%;
+  border: solid black;
+  width: 50%;
+  text-align: center;
+}
+
+/* Styling for ready button on rules/instructions page */
+.ready {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 50%
+}
+
+/* Styling for character block */
+.select-character {
+  box-shadow: 50px 50px 113px rgb(0, 0, 0);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Styling for flag movie on initial page */
+.flag {
+  position: absolute;
+  z-index: -1;
+  background-size: auto;
+  top: 0;
+  left: 0;
+}
+
+.instructions {
+  font-size: 20px;
+}

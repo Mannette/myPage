@@ -1,0 +1,207 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/css/marioKartStylesheet.css">
+
+{% endblock %}
+
+{% block content %}
+    <!-- container for start screen -->
+    <container id="startScreen">
+
+      <video loop class="flag" autoplay="autoplay">
+        <source src="images/Waving-Checkered-Flag.mp4" type="video/mp4">
+      </video>
+
+      <div class="titleRules">
+        <p class="rules instructions"><b>Rules/Instructions</b></p>
+        <p class="rules">The aim of the game is to beat the computer in a race by answering questions. First, you have to pick a player. Each player will go to their respective starting points and the first question will appear in the bottom right corner. You must answer questions correctly in order to advance. You do not move if the question is answered incorrectly. Click the button when you are ready.</p>
+        <br>
+      </div>
+      <input type="submit" class="ready btn-primary active btn-lg" value="READY?!">
+
+    </container>
+
+    <!-- BEGIN RACE ELEMENTS -->
+    <!-- container for race -->
+    <container id="raceElements">
+      <!-- Area with computerOne positions -->
+      <section id="computerOnePosition" class="allPositions">
+
+        <span id="computerOneStart" class="computerOne position computerStart"></span>
+
+        <span id="computerOnePositionOne" class="computerOne position"></span>
+
+        <span id="computerOnePositionTwo" class="computerOne position"></span>
+
+        <span id="computerOnePositionThree" class="computerOne position"></span>
+
+        <span id="computerOnePositionFour" class="computerOne position"></span>
+
+        <span id="computerOnePositionFive" class="computerOne position"></span>
+
+        <span id="computerOnePositionSix" class="computerOne position"></span>
+
+        <span id="computerOnePositionSeven" class="computerOne position"></span>
+
+        <span id="computerOnePositionEight" class="computerOne position"></span>
+
+        <span id="computerOnePositionNine" class="computerOne position"></span>
+
+        <span id="computerOneFinish" class="computerOne position computerFinish"></span>
+
+      </section>
+      <!-- Area with computer positions -->
+      <section id="computerTwoPosition" class="allPositions">
+
+        <span id="computerTwoStart" class="computerTwo position computerStart"></span>
+
+        <span id="computerTwoPositionOne" class="computerTwo position"></span>
+
+        <span id="computerTwoPositionTwo" class="computerTwo position"></span>
+
+        <span id="computerTwoPositionThree" class="computerTwo position"></span>
+
+        <span id="computerTwoPositionFour" class="computerTwo position"></span>
+
+        <span id="computerTwoPositionFive" class="computerTwo position"></span>
+
+        <span id="computerTwoPositionSix" class="computerTwo position"></span>
+
+        <span id="computerTwoPositionSeven" class="computerTwo position"></span>
+
+        <span id="computerTwoPositionEight" class="computerTwo position"></span>
+
+        <span id="computerTwoPositionNine" class="computerTwo position"></span>
+
+        <span id="computerTwoFinish" class="computerTwo position computerFinish"></span>
+
+      </section>
+      <!-- Area with computer positions -->
+      <section id="computerThreePosition" class="allPositions">
+
+        <span id="computerThreeStart" class="computerThree position computerStart"></span>
+
+        <span id="computerThreePositionOne" class="computerThree position"></span>
+
+        <span id="computerThreePositionTwo" class="computerThree position"></span>
+
+        <span id="computerThreePositionThree" class="computerThree position"></span>
+
+        <span id="computerThreePositionFour" class="computerThree position"></span>
+
+        <span id="computerThreePositionFive" class="computerThree position"></span>
+
+        <span id="computerThreePositionSix" class="computerThree position"></span>
+
+        <span id="computerThreePositionSeven" class="computerThree position"></span>
+
+        <span id="computerThreePositionEight" class="computerThree position"></span>
+
+        <span id="computerThreePositionNine" class="computerThree position"></span>
+
+        <span id="computerThreeFinish" class="computerThree position computerFinish"></span>
+
+      </section>
+      <!-- Area with player positions -->
+      <section id="playerPosition" class="allPositions">
+
+        <span id="playerStart" class="player position playerStart"></span>
+
+        <span id="playerPositionOne" class="player position"></span>
+
+        <span id="playerPositionTwo" class="player position"></span>
+
+        <span id="playerPositionThree" class="player position"></span>
+
+        <span id="playerPositionFour" class="player position"></span>
+
+        <span id="playerPositionFive" class="player position"></span>
+
+        <span id="playerPositionSix" class="player position"></span>
+
+        <span id="playerPositionSeven" class="player position"></span>
+
+        <span id="playerPositionEight" class="player position"></span>
+
+        <span id="playerPositionNine" class="player position"></span>
+
+        <span id="playerFinish" class="player position playerFinish"></span>
+
+      </section>
+
+      <!-- Area for questions/answers -->
+      <section class="question-box">
+        <!-- Replay button -->
+        <input id="replay" type="submit" class="btn-primary replay" value="Replay?">
+
+        <!-- Area for questions -->
+        <div id="clear">
+          <div id="questions" class="questions"></div>
+          <br><br>
+
+          <!-- Radio buttons for answers -->
+          <input type="radio" name="answers"  value="1">
+          <span class="firstOption question-option"></span>
+          <br><br>
+          <input type="radio" name="answers"  value="2">
+          <span class="secondOption question-option"></span>
+          <br><br>
+          <input type="radio" name="answers" value="3">
+          <span class="thirdOption question-option"></span>
+          <br><br>
+          <input type="radio" name="answers" value="4">
+          <span class="fourthOption question-option"></span>
+          <br><br>
+
+          <!-- Button for advancing -->
+          <input id="advance" class="btn-success advanceButton" type="button" value="Check your answer!">
+        </div>
+      </section>
+
+    </container>
+    <!-- END RACE ELEMENTS -->
+
+    <!-- BEGIN CHARACTER SELECTION -->
+    <container id="character_select">
+
+      <div id="characters" class="characters">
+        <p>Select Your Player!</p>
+        <!-- Buttons to select character -->
+        <!-- Mario -->
+        <input id="mario" class="select-character" type="image" name="submit" value="submit" src="images/Mario.jpg">
+
+        <!-- Luigi -->
+        <input id="luigi" class="select-character" type="image" name="submit" value="submit" src="images/Luigi.jpg">
+
+        <!-- Toad -->
+        <input id="toad" class="select-character" type="image" name="submit" value="submit" src="images/Toad.jpg">
+
+        <!-- Peach -->
+        <input id="peach" class="select-character" type="image" name="submit" value="submit" src="images/Peach.jpg">
+      </div>
+
+    </container>
+    <!-- END CHARACTER SELECTION -->
+
+
+
+
+
+ <!-- *** SCRIPTS *** -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js">
+  </script>
+
+  <script type="text/javascript" src="/js/marioKart/utility.js">
+  </script>
+
+  <script type="text/javascript" src="/js/marioKart/AI.js">
+  </script>
+
+  <script type="text/javascript" src="/js/marioKart/dom.js">
+  </script>
+
+{% endblock %}

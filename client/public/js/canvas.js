@@ -543,7 +543,6 @@ function sunflowerFrame () {
   if (counter < 10000) {
     window.requestAnimationFrame(sunflowerFrame);
     counter++;
-    console.log(counter);
   } else {
     window.cancelAnimationFrame(sunflowerFrame);
   }
@@ -593,6 +592,7 @@ dotsButton.onclick = function () {
 
 // clear canvas
 clearButton.onclick = function () {
+  window.cancelAnimationFrame(sunflowerFrame);
   context.clearRect(0, 0, size.x, size.y);
   drawBorder();
 };
