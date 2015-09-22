@@ -4,6 +4,10 @@ var size = { x: canvas.width, y: canvas.height };
 var pixelSize = 5;
 var incriment = 0;
 
+// setting active tab
+document.getElementById('home').toggleClass('active');
+document.getElementById('visuals').toggleClass('active');
+
 // draws border
 function drawBorder () {
   context.strokeRect(0, 0, canvas.width, canvas.height);

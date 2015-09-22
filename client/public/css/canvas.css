@@ -2,15 +2,22 @@
    width: 100%;
    text-align:center;
    position: relative;
-   top: 50%;
-   transform: translateY(50%);
+   top: 0;
+}
 
+body {
+  background-color: #3c5781;
 }
 
 canvas {
    display: inline;
+   background-color: white;
 }
+
 button {
-  width: 100px;
-  text-align: center;
+  width: auto;
+}
+
+#tabs {
+  color: black;
 }

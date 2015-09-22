@@ -9,6 +9,19 @@
     {% endblock %}
   </head>
   <body>
+    <div id="tabs" class="tab-container container">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class={{ home }}>
+          <a href="homepage" id="home">Home</a>
+        </li>
+        <li class={{ projects }}>
+          <a href="projects" id="projects">Projects</a>
+        </li>
+        <li class={{ visuals }}>
+          <a href="visuals" id="visuals">Cool Visuals!</a>
+        </li>
+      </ul>
+    </div>
     {% block content %}
     {% endblock %}
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
