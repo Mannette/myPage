@@ -13,7 +13,7 @@ var routes = require('./routes/index.js');
 
 
 // *** express instance *** //
-var app = express();
+var app = module.exports.app = exports.app = express();
 
 
 // *** view engine *** //
